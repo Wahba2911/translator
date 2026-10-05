@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Translator App</title>
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
+      <section class="translator-panel">
+        <h1 class="text-center mb-4">Translator App</h1>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label class="visually-hidden" for="textFrom">Text to translate</label>
+            <textarea class="form-control translator-text text-from" id="textFrom"></textarea>
+            <label class="visually-hidden" for="selectFrom">Translate from</label>
+            <select class="form-select language-select select-from" id="selectFrom"></select>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="visually-hidden" for="textTo">Translated text</label>
+            <textarea class="form-control translator-text text-to" id="textTo" readonly></textarea>
+            <label class="visually-hidden" for="selectTo">Translate to</label>
+            <select class="form-select language-select select-to" id="selectTo"></select>
+          </div>
+        </div>
+        <p class="status-message text-center mt-3 mb-2" role="status"></p>
+        <div class="text-center">
+          <button class="btn btn-outline-primary translate-result" type="button">
+            Translate
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
